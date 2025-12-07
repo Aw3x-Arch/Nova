@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends page - Nova</title>
+
+    <!--TODO Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!--TODO Custom CSS -->
+    <link rel="stylesheet" href="/Css/Friends.css" />
+
+    <!--TODO Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+
+  <body class="light">
+    <button id="toggleTheme">
+      <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
+    </button>
+    <section class="container-fluid">
+      <div class="pc-gui">
+        <div class="row">
+          <!--TODO Navbar -->
+          <div class="col-3">
+            <div class="navbar">
+              <ul class="navbar-nav">
+                <li class="nav-item no-scale" id="Logo">
+                  <h1>
+                    <img
+                      id="logoImg"
+                      src="/Image/LogoDark.svg"
+                      alt=""
+                      width="60"
+                    />
+                    Nova
+                  </h1>
+                </li>
+
+                <li class="nav-item">
+                  <a href="Home.html"
+                    ><i class="fa-solid fa-compass"></i> New feeds</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a href="/Html/Group.html"
+                    ><i class="fa-solid fa-people-group"></i> Group</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a href="/Html/Messages.html"
+                    ><i class="fa-solid fa-message"></i> Messages</a
+                  >
+                </li>
+
+                <li class="nav-item" id="selected">
+                  <a href="Friends.html"
+                    ><i class="fa-solid fa-user-group"></i> Friends</a
+                  >
+                </li>
+
+                <li class="nav-item" id="notify">
+                  <button class="openNotify">
+                    <i class="fa-solid fa-bell"></i> Notifications
+                  </button>
+                </li>
+
+                <div class="profile">
+                  <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+
+                  <div class="info-user">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                    <h4>Michael Robert</h4>
+                  </div>
+
+                  <div class="status">
+                    <p class="your-post-count">
+                      <i class="fa-solid fa-paper-plane"></i> Your post: 0 post
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-chart-line"></i> Active time: 1 hour
+                    </p>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+          <!--TODO Search & Suggest Section -->
+          <div class="col-6">
+            <div class="Search-bar">
+              <h2>
+                <i class="fa-solid fa-magnifying-glass fa-bounce"></i> Discover
+                Friends
+              </h2>
+              <input type="text" placeholder="Looking for friends?" />
+            </div>
+
+            <div class="suggest-slider">
+              <div class="suggest-title">
+                <h2>
+                  <i class="fa-solid fa-circle-user"></i> People You May Know
+                </h2>
+              </div>
+
+              <div class="track">
+                <div class="suggest-user">
+                  <div class="suggest-avatar">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                  </div>
+                  <div class="suggest-add">
+                    <h3>Alex</h3>
+                    <button class="Add">
+                      Add <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="suggest-user">
+                  <div class="suggest-avatar">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                  </div>
+                  <div class="suggest-add">
+                    <h3>Diana</h3>
+                    <button class="Add">
+                      Add <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="suggest-user">
+                  <div class="suggest-avatar">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                  </div>
+                  <div class="suggest-add">
+                    <h3>Peter</h3>
+                    <button class="Add">
+                      Add <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="suggest-user">
+                  <div class="suggest-avatar">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                  </div>
+                  <div class="suggest-add">
+                    <h3>Jay</h3>
+                    <button class="Add">
+                      Add <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="suggest-user">
+                  <div class="suggest-avatar">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                  </div>
+                  <div class="suggest-add">
+                    <h3>Rossy</h3>
+                    <button class="Add">
+                      Add <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="suggest-user">
+                  <div class="suggest-avatar">
+                    <img src="/Image/avatar.jpeg" alt="" />
+                  </div>
+                  <div class="suggest-add">
+                    <h3>Haise</h3>
+                    <button class="Add">
+                      Add <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--TODO Your Friends -->
+          <div class="col-3">
+            <div class="your-friends">
+              <div class="your-friends-title">
+                <h2>
+                  <i class="fa-solid fa-user-group"></i> Your friends:
+                  <span id="friendCount">0</span>
+                </h2>
+              </div>
+
+              <div class="friends">
+                <h4><img src="/Image/avatar.jpeg" alt="" /> Michael</h4>
+                <button class="remove">
+                  <i class="fa-solid fa-trash"></i> Unfriend
+                </button>
+              </div>
+              <div class="friends">
+                <h4><img src="/Image/avatar.jpeg" alt="" /> Elsa</h4>
+                <button class="remove">
+                  <i class="fa-solid fa-trash"></i> Unfriend
+                </button>
+              </div>
+              <div class="friends">
+                <h4><img src="/Image/avatar.jpeg" alt="" /> Cloony</h4>
+                <button class="remove">
+                  <i class="fa-solid fa-trash"></i> Unfriend
+                </button>
+              </div>
+              <div class="friends">
+                <h4><img src="/Image/avatar.jpeg" alt="" /> George</h4>
+                <button class="remove">
+                  <i class="fa-solid fa-trash"></i> Unfriend
+                </button>
+              </div>
+            </div>
+            <!--TODO Notification Panel -->
+            <div class="notify-gui">
+              <div class="notify-panel">
+                <div class="notify-title">
+                  <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+                </div>
+                <div class="notify-list">
+                  <div class="notify-item">
+                    <p>You and Michael are now friends.</p>
+                  </div>
+                  <div class="notify-item">
+                    <p>New device detected. Was this you?</p>
+                  </div>
+                  <div class="notify-item">
+                    <p>
+                      Alert: New login detected. If this wasn't you, please
+                      secure your account.
+                    </p>
+                  </div>
+                  <div class="notify-item">
+                    <p>Your account was accessed using Windows at 16:05.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/Javascript/Friends.js"></script>
+  </body>
+</html>
