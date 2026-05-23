@@ -1,122 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login page - Nova</title>
 
-    <!--TODO Bootstrap -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login page - Nova</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+  <!--TODO Bootstrap -->
 
-    <!--TODO Style.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/Css/Login.css" />
+  <!--TODO Style.css -->
 
-    <!--TODO Font awesome -->
+  <link rel="stylesheet" href="/Css/Login.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body class="light">
-    <button id="toggleTheme">
-      <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
-    </button>
-    <section class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <h1 id="Logo">
-            <img id="logoImg" src="/Image/LogoDark.svg" width="100" />
-            Nova
-          </h1>
+  <!--TODO Font awesome -->
 
-          <div class="Welcome">
-            <h1 stle="color: #0A0A0A">Welcome back</h1>
-            <p style="color: #8a8a8a">
-              Welcome back, Please enter Your details
-            </p>
-          </div>
-          <div class="container">
-            <div class="Switch">
-              <button id="SignIn">Sign in</button>
-              <button id="SignUp">Sign up</button>
-            </div>
-          </div>
-          <div id="SignInBox">
-            <form class="login">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Email or phone number or username"
-              />
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-              />
-            </form>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
 
-            <a class="Forgot" href="">Forgot password?</a>
+<body>
+  <button id="toggleTheme">
+    <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
+  </button>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 id="Logo">
+          <img id="logoImg" src="/Image/LogoDark.svg" width="100" />
+          Nova
+        </h1>
 
-            <button class="btn btn-primary" id="Continue">Continue</button>
-
-            <div class="Method">
-              <p>⸻Or Continue With⸻</p>
-
-              <div class="layout">
-                <a><i class="fa-brands fa-google"></i> Google</a>
-                <a><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a><i class="fa-brands fa-github"></i> Github</a>
-              </div>
-            </div>
-          </div>
-
-          <div id="SignUpBox" style="display: none">
-            <form class="login">
-              <input type="text" class="form-control" placeholder="Username" />
-              <input type="email" class="form-control" placeholder="Email" />
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-              />
-            </form>
-
-            <button class="btn btn-primary" id="Create">Create Account</button>
-          </div>
+        <div class="Welcome">
+          <h1 stle="color: #0A0A0A">Welcome back</h1>
+          <p style="color: #8a8a8a">
+            Welcome back, Please enter Your details
+          </p>
         </div>
-        <div class="col-md-6" id="Layout2">
-          <img id="vault" src="/Image/VaultDark.svg" alt="" />
-        </div>
-      </div>
-      <div id="Notify">
         <div class="container">
-          <h4>
-            Account successfully created
-            <img src="/Image/Tick.png" width="20" />
-          </h4>
-          <p>Your account has been created</p>
+          <div class="Switch">
+            <button id="SignIn">Sign in</button>
+            <button id="SignUp">Sign up</button>
+          </div>
+        </div>
+        <div id="SignInBox">
+          <form class="login">
+            <input type="text" class="form-control" placeholder="Enter your email" />
+            <input type="password" class="form-control" placeholder="Enter your password" />
+          </form>
+
+          <a class="Forgot" href="">Forgot password?</a>
+
+          <button class="btn btn-primary" id="Continue">Continue</button>
+
+          <div class="Method">
+            <p>⸻Or Continue With⸻</p>
+
+            <div class="layout">
+              <a><i class="fa-brands fa-google"></i> Google</a>
+              <a><i class="fa-brands fa-facebook"></i> Facebook</a>
+              <a><i class="fa-brands fa-github"></i> Github</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="SignUpBox" style="display: none">
+          <form class="login">
+            <input type="text" class="form-control" placeholder="Username" />
+            <input type="email" class="form-control" placeholder="Email" />
+            <input type="password" class="form-control" placeholder="Password" />
+          </form>
+          <button class="btn btn-primary" id="Create">Create Account</button>
+
         </div>
       </div>
-    </section>
+      <div class="col-md-6" id="Layout2">
+        <img id="vault" src="/Image/VaultDark.svg" alt="" />
+      </div>
+    </div>
+    <div id="Notify">
+      <div class="container">
+        <h4>
+          Account successfully created
+          <img src="/Image/Tick.png" width="20" />
+        </h4>
+        <p>Your account has been created</p>
+      </div>
+    </div>
+  </section>
 
-    <!--TODO Bootstrap -->
+  <!--TODO Bootstrap -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
-    <!--TODO Javascript -->
+  <!--TODO Javascript -->
 
-    <script src="/Javascript/Login.js"></script>
-  </body>
+  <script type="module" src="/Javascript/Login.js"></script>
+</body>
+
 </html>

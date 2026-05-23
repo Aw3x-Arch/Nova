@@ -1,271 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group page - Nova</title>
-    <!--TODO Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
 
-    <!--TODO CSS -->
-    <link rel="stylesheet" href="/Css/Group.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group page - Nova</title>
+  <!--TODO Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-    <!--TODO Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body class="light">
-    <button id="toggleTheme">
-      <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
-    </button>
-    <section class="container-fluid">
-      <div class="pc-gui">
-        <div class="row">
-          <!--TODO Navbar -->
-          <div class="col-3">
-            <div class="navbar">
-              <ul class="navbar-nav">
-                <li class="nav-item no-scale" id="Logo">
-                  <h1>
-                    <img
-                      id="logoImg"
-                      src="/Image/LogoDark.svg"
-                      alt=""
-                      width="60"
-                    />
-                    Nova
-                  </h1>
-                </li>
+  <!--TODO CSS -->
+  <link rel="stylesheet" href="/Css/Group.css" />
 
-                <li class="nav-item">
-                  <a href="Home.html"
-                    ><i class="fa-solid fa-compass"></i> New feeds</a
-                  >
-                </li>
+  <!--TODO Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
 
-                <li class="nav-item" id="selected">
-                  <a href="/Html/Group.html"
-                    ><i class="fa-solid fa-people-group"></i> Group</a
-                  >
-                </li>
+<body class="light">
+  <button id="toggleTheme">
+    <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
+  </button>
+  <section class="container-fluid">
+    <div class="pc-gui">
+      <div class="row">
+        <!--TODO Navbar -->
+        <div class="col-3">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item no-scale" id="Logo">
+                <h1>
+                  <img id="logoImg" src="/Image/LogoDark.svg" alt="" width="60" />
+                  Nova
+                </h1>
+              </li>
 
-                <li class="nav-item">
-                  <a href="/Html/Messages.html"
-                    ><i class="fa-solid fa-message"></i> Messages</a
-                  >
-                </li>
+              <li class="nav-item">
+                <a href="Home.html"><i class="fa-solid fa-compass"></i> New feeds</a>
+              </li>
 
-                <li class="nav-item">
-                  <a href="Friends.html"
-                    ><i class="fa-solid fa-user-group"></i> Friends</a
-                  >
-                </li>
+              <li class="nav-item" id="selected">
+                <a href="/Html/Group.html"><i class="fa-solid fa-people-group"></i> Group</a>
+              </li>
 
-                <li class="nav-item" id="notify">
-                  <button class="openNotify">
-                    <i class="fa-solid fa-bell"></i> Notifications
-                  </button>
-                </li>
+              <li class="nav-item">
+                <a href="/Html/Messages.html"><i class="fa-solid fa-message"></i> Messages</a>
+              </li>
 
-                <div class="profile">
-                  <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+              <li class="nav-item">
+                <a href="Friends.html"><i class="fa-solid fa-user-group"></i> Friends</a>
+              </li>
 
-                  <div class="info-user">
-                    <img src="/Image/avatar.jpeg" alt="" />
-                    <h4>Michael Robert</h4>
-                  </div>
+              <li class="nav-item" id="notify">
+                <button class="openNotify">
+                  <i class="fa-solid fa-bell"></i> Notifications
+                </button>
+              </li>
 
-                  <div class="status">
-                    <p class="your-post-count">
-                      <i class="fa-solid fa-paper-plane"></i> Your post: 0 post
-                    </p>
-                    <p>
-                      <i class="fa-solid fa-chart-line"></i> Active time: 1 hour
-                    </p>
-                  </div>
+              <div class="profile">
+                <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+
+                <div class="info-user">
+                  <img src="/Image/avatar.jpeg" alt="" />
+                  <h4></h4>
                 </div>
-              </ul>
-            </div>
+                <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+
+              </div>
+            </ul>
           </div>
-          <!--TODO Group  -->
-          <div class="col-6">
-            <div class="suggest-group-title">
-              <h2>Suggest group</h2>
-            </div>
-            <div class="suggest-group">
-              <div class="suggest-item">
-                <div class="suggest-avatar">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="suggest-join">
-                  <h4>BioWorld</h4>
-                  <button class="Join">
-                    Join <i class="fa-solid fa-right-to-bracket"></i>
-                  </button>
-                </div>
+        </div>
+        <!--TODO Group  -->
+        <div class="col-6">
+          <div class="suggest-group-title">
+            <h2>Suggest group</h2>
+          </div>
+          <div class="suggest-group">
+            <div class="suggest-item">
+              <div class="suggest-avatar">
+                <img src="/Image/photo-gallery.png" alt="" />
               </div>
-
-              <div class="suggest-item">
-                <div class="suggest-avatar">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="suggest-join">
-                  <h4>TechHub</h4>
-                  <button class="Join">
-                    Join <i class="fa-solid fa-right-to-bracket"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="suggest-item">
-                <div class="suggest-avatar">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="suggest-join">
-                  <h4>Farmer</h4>
-                  <button class="Join">
-                    Join <i class="fa-solid fa-right-to-bracket"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="suggest-item">
-                <div class="suggest-avatar">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="suggest-join">
-                  <h4>ArtStudio</h4>
-                  <button class="Join">
-                    Join <i class="fa-solid fa-right-to-bracket"></i>
-                  </button>
-                </div>
+              <div class="suggest-join">
+                <h4>BioWorld</h4>
+                <button class="Join">
+                  Join <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
               </div>
             </div>
-            <div class="group-title">
-              <h2>Your groups</h2>
+
+            <div class="suggest-item">
+              <div class="suggest-avatar">
+                <img src="/Image/photo-gallery.png" alt="" />
+              </div>
+              <div class="suggest-join">
+                <h4>TechHub</h4>
+                <button class="Join">
+                  Join <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+              </div>
             </div>
-            <div class="group-list">
-              <div class="group-item">
-                <div class="group-img">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="group-name">
-                  <h4>FitnessZone</h4>
-                </div>
-              </div>
 
-              <div class="group-item">
-                <div class="group-img">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="group-name">
-                  <h4>GeoExplorers</h4>
-                </div>
+            <div class="suggest-item">
+              <div class="suggest-avatar">
+                <img src="/Image/photo-gallery.png" alt="" />
               </div>
-
-              <div class="group-item">
-                <div class="group-img">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="group-name">
-                  <h4>Book club</h4>
-                </div>
+              <div class="suggest-join">
+                <h4>Farmer</h4>
+                <button class="Join">
+                  Join <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
               </div>
+            </div>
 
-              <div class="group-item">
-                <div class="group-img">
-                  <img src="/Image/photo-gallery.png" alt="" />
-                </div>
-                <div class="group-name">
-                  <h4>ChemLab</h4>
-                </div>
+            <div class="suggest-item">
+              <div class="suggest-avatar">
+                <img src="/Image/photo-gallery.png" alt="" />
+              </div>
+              <div class="suggest-join">
+                <h4>ArtStudio</h4>
+                <button class="Join">
+                  Join <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
               </div>
             </div>
           </div>
-          <!--TODO Create a new group  -->
-          <div class="col-3">
-            <div class="create-title">
-              <h2>Create your group</h2>
-            </div>
-            <div class="input">
-              <input
-                type="text"
-                name=""
-                id="groupName"
-                placeholder="Group name"
-              />
-              <input type="text" name="" id="groupAbout" placeholder="About" />
-              <input
-                type="text"
-                name=""
-                id="inviteFriends"
-                placeholder="Invite friends"
-              />
-            </div>
-            <div class="create-btn">
-              <button id="createGroupBtn">
-                <i class="fa-solid fa-plus"></i> Create
-              </button>
-            </div>
-            <img id="group" src="/Image/GroupDark.svg" alt="" />
+          <div class="group-title">
+            <h2>Your groups</h2>
           </div>
-          <!--TODO Notify Error -->
-          <div class="error-gui">
-            <div class="error-panel">
-              <div class="error-icon">
-                <h1><img src="/Image/Error.png" alt="" /> Error</h1>
+          <div class="group-list">
+            <div class="group-item">
+              <div class="group-img">
+                <img src="/Image/photo-gallery.png" alt="" />
               </div>
-              <div class="error-info">
-                <h2>Please enter a group name!</h2>
+              <div class="group-name">
+                <h4>FitnessZone</h4>
               </div>
             </div>
-          </div>
-          <!--TODO Notify Error -->
-          <div class="success-gui">
-            <div class="success-panel">
-              <div class="success-icon">
-                <h1><img src="/Image/Tick.png" alt="" /> Succesful!</h1>
+
+            <div class="group-item">
+              <div class="group-img">
+                <img src="/Image/photo-gallery.png" alt="" />
               </div>
-              <div class="success-info">
-                <h2>Group "ChatterBox" created successfully!</h2>
+              <div class="group-name">
+                <h4>GeoExplorers</h4>
+              </div>
+            </div>
+
+            <div class="group-item">
+              <div class="group-img">
+                <img src="/Image/photo-gallery.png" alt="" />
+              </div>
+              <div class="group-name">
+                <h4>Book club</h4>
+              </div>
+            </div>
+
+            <div class="group-item">
+              <div class="group-img">
+                <img src="/Image/photo-gallery.png" alt="" />
+              </div>
+              <div class="group-name">
+                <h4>ChemLab</h4>
               </div>
             </div>
           </div>
-          <!--TODO Notification Panel -->
-          <div class="notify-gui">
-            <div class="notify-panel">
-              <div class="notify-title">
-                <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+        </div>
+        <!--TODO Create a new group  -->
+        <div class="col-3">
+          <div class="create-title">
+            <h2>Create your group</h2>
+          </div>
+          <div class="input">
+            <input type="text" name="" id="groupName" placeholder="Group name" />
+            <input type="text" name="" id="groupAbout" placeholder="About" />
+            <input type="text" name="" id="inviteFriends" placeholder="Invite friends" />
+          </div>
+          <div class="create-btn">
+            <button id="createGroupBtn">
+              <i class="fa-solid fa-plus"></i> Create
+            </button>
+          </div>
+          <img id="group" src="/Image/GroupDark.svg" alt="" />
+        </div>
+        <!--TODO Notify Error -->
+        <div class="error-gui">
+          <div class="error-panel">
+            <div class="error-icon">
+              <h1><img src="/Image/Error.png" alt="" /> Error</h1>
+            </div>
+            <div class="error-info">
+              <h2>Please enter a group name!</h2>
+            </div>
+          </div>
+        </div>
+        <!--TODO Notify Error -->
+        <div class="success-gui">
+          <div class="success-panel">
+            <div class="success-icon">
+              <h1><img src="/Image/Tick.png" alt="" /> Succesful!</h1>
+            </div>
+            <div class="success-info">
+              <h2>Group "ChatterBox" created successfully!</h2>
+            </div>
+          </div>
+        </div>
+        <!--TODO Notification Panel -->
+        <div class="notify-gui">
+          <div class="notify-panel">
+            <div class="notify-title">
+              <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+            </div>
+            <div class="notify-list">
+              <div class="notify-item">
+                <p>You and Michael are now friends.</p>
               </div>
-              <div class="notify-list">
-                <div class="notify-item">
-                  <p>You and Michael are now friends.</p>
-                </div>
-                <div class="notify-item">
-                  <p>New device detected. Was this you?</p>
-                </div>
-                <div class="notify-item">
-                  <p>
-                    Alert: New login detected. If this wasn't you, please secure
-                    your account.
-                  </p>
-                </div>
-                <div class="notify-item">
-                  <p>Your account was accessed using Windows at 16:05.</p>
-                </div>
+              <div class="notify-item">
+                <p>New device detected. Was this you?</p>
+              </div>
+              <div class="notify-item">
+                <p>
+                  Alert: New login detected. If this wasn't you, please secure
+                  your account.
+                </p>
+              </div>
+              <div class="notify-item">
+                <p>Your account was accessed using Windows at 16:05.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <script src="/Javascript/Group.js"></script>
-  </body>
+    </div>
+  </section>
+  <script type="module" src="/Javascript/Group.js"></script>
+</body>
+
 </html>

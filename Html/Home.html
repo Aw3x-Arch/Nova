@@ -1,487 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page - Nova</title>
 
-    <!--TODO Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page - Nova</title>
 
-    <!--TODO CSS -->
-    <link rel="stylesheet" href="/Css/Home.css" />
+  <!--TODO Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-    <!--TODO Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
+  <!--TODO CSS -->
+  <link rel="stylesheet" href="/Css/Home.css" />
 
-  <body class="light">
-    <button id="toggleTheme">
-      <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
-    </button>
-    <section class="container-fluid">
-      <div class="pc-gui">
-        <div class="row">
-          <!--TODO Navbar -->
-          <div class="col-3">
-            <div class="navbar" id="sidebar">
-              <ul class="navbar-nav">
-                <div id="sidebar-handle"></div>
-                <li class="nav-item no-scale" id="Logo">
-                  <h1>
-                    <img
-                      id="logoImg"
-                      src="/Image/LogoDark.svg"
-                      alt=""
-                      width="60"
-                    />
-                    Nova
-                  </h1>
-                </li>
+  <!--TODO Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
 
-                <li class="nav-item" id="selected">
-                  <a href="Home.html"
-                    ><i class="fa-solid fa-compass"></i> New feeds</a
-                  >
-                </li>
+<body class="light">
+  <button id="toggleTheme">
+    <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
+  </button>
+  <section class="container-fluid">
+    <div class="pc-gui">
+      <div class="row">
+        <!--TODO Navbar -->
+        <div class="col-3">
+          <div class="navbar" id="sidebar">
+            <ul class="navbar-nav">
+              <div id="sidebar-handle"></div>
+              <li class="nav-item no-scale" id="Logo">
+                <h1>
+                  <img id="logoImg" src="/Image/LogoDark.svg" alt="" width="60" />
+                  Nova
+                </h1>
+              </li>
 
-                <li class="nav-item">
-                  <a href="/Html/Group.html"
-                    ><i class="fa-solid fa-people-group"></i> Group</a
-                  >
-                </li>
+              <li class="nav-item" id="selected">
+                <a href="Home.html"><i class="fa-solid fa-compass"></i> New feeds</a>
+              </li>
 
-                <li class="nav-item">
-                  <a href="/Html/Messages.html"
-                    ><i class="fa-solid fa-message"></i> Messages</a
-                  >
-                </li>
+              <li class="nav-item">
+                <a href="/Html/Group.html"><i class="fa-solid fa-people-group"></i> Group</a>
+              </li>
 
-                <li class="nav-item">
-                  <a href="Friends.html"
-                    ><i class="fa-solid fa-user-group"></i> Friends</a
-                  >
-                </li>
+              <li class="nav-item">
+                <a href="/Html/Messages.html"><i class="fa-solid fa-message"></i> Messages</a>
+              </li>
 
-                <li class="nav-item" id="notify">
-                  <button class="openNotify">
-                    <i class="fa-solid fa-bell"></i> Notifications
-                  </button>
-                </li>
+              <li class="nav-item">
+                <a href="Friends.html"><i class="fa-solid fa-user-group"></i> Friends</a>
+              </li>
 
-                <div class="profile">
-                  <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+              <li class="nav-item" id="notify">
+                <button class="openNotify">
+                  <i class="fa-solid fa-bell"></i> Notifications
+                </button>
+              </li>
 
-                  <div class="info-user">
-                    <img src="/Image/avatar.jpeg" alt="" />
-                    <h4>Michael Robert</h4>
-                  </div>
-
-                  <div class="status">
-                    <p class="your-post-count">
-                      <i class="fa-solid fa-paper-plane"></i> Your post: 0 post
-                    </p>
-                    <p>
-                      <i class="fa-solid fa-chart-line"></i> Active time: 1 hour
-                    </p>
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </div>
-
-          <!--TODO Feeds -->
-          <div class="col-6" id="feeds">
-            <div class="container-fluid">
-              <h2 class="title">Feeds</h2>
-
-              <!--TODO Prepare New Post -->
-              <div class="prepare-post">
-                <div class="top-prepare">
+              <div class="profile">
+                <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+                <div class="info-user">
                   <img src="/Image/avatar.jpeg" alt="" />
-                  <div class="editor">
-                    <button class="openCreatePosts">
-                      <p>What's on your mind?</p>
-                    </button>
-                  </div>
+                  <h4></h4>
+                </div>
+                <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <!--TODO Feeds -->
+        <div class="col-6" id="feeds">
+          <div class="container-fluid">
+            <h2 class="title">Feeds</h2>
+
+            <!--TODO Prepare New Post -->
+            <div class="prepare-post">
+              <div class="top-prepare">
+                <img src="/Image/avatar.jpeg" alt="" />
+                <div class="editor">
+                  <button class="openCreatePosts">
+                    <p>What's on your mind?</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!--TODO Post 1 -->
+            <div class="post">
+              <div class="top-post">
+                <div class="post-user-info">
+                  <h4 class="post-username">
+                    <img src="/Image/avatar.jpeg" class="post-avatar" /> Alex
+                  </h4>
+                  <p class="post-time">2 hours ago</p>
                 </div>
               </div>
 
-              <!--TODO Post 1 -->
-              <div class="post">
-                <div class="top-post">
-                  <div class="post-user-info">
-                    <h4 class="post-username">
-                      <img src="/Image/avatar.jpeg" class="post-avatar" /> Alex
-                    </h4>
-                    <p class="post-time">2 hours ago</p>
-                  </div>
+              <p class="post-text">
+                This is the most beautiful mountain I have ever seen!
+              </p>
+
+              <div class="post-image">
+                <img src="/Image/mountain.jpeg" />
+              </div>
+
+              <div class="post-bottom">
+                <div class="action">
+                  <i class="fa-solid fa-eye"></i> Views
+                </div>
+                <div class="action">
+                  <button class="like-btn">
+                    <i class="fa-solid fa-heart fa-beat"></i> Like
+                  </button>
+                </div>
+                <div class="action">
+                  <button class="opencomment">
+                    <i class="fa-solid fa-comment"></i> Comment
+                  </button>
                 </div>
 
-                <p class="post-text">
-                  This is the most beautiful mountain I have ever seen!
-                </p>
-
-                <div class="post-image">
-                  <img src="/Image/mountain.jpeg" />
+                <div class="reaction">
+                  <button>😯</button><button>😡</button><button>❤️</button><button>😂</button><button>😢</button>
                 </div>
+              </div>
+            </div>
 
-                <div class="post-bottom">
-                  <div class="action">
-                    <i class="fa-solid fa-eye"></i> Views
-                  </div>
-                  <div class="action">
-                    <button class="like-btn">
-                      <i class="fa-solid fa-heart fa-beat"></i> Like
-                    </button>
-                  </div>
-                  <div class="action">
-                    <button class="opencomment">
-                      <i class="fa-solid fa-comment"></i> Comment
-                    </button>
-                  </div>
-
-                  <div class="reaction">
-                    <button>😯</button><button>😡</button><button>❤️</button
-                    ><button>😂</button><button>😢</button>
-                  </div>
+            <!--TODO Post 2 -->
+            <div class="post">
+              <div class="top-post">
+                <div class="post-user-info">
+                  <h4 class="post-username">
+                    <img src="/Image/avatar.jpeg" class="post-avatar" /> Lisa
+                  </h4>
+                  <p class="post-time">3 minutes ago</p>
                 </div>
               </div>
 
-              <!--TODO Post 2 -->
-              <div class="post">
-                <div class="top-post">
-                  <div class="post-user-info">
-                    <h4 class="post-username">
-                      <img src="/Image/avatar.jpeg" class="post-avatar" /> Lisa
-                    </h4>
-                    <p class="post-time">3 minutes ago</p>
-                  </div>
+              <p class="post-text">Pyramid</p>
+
+              <div class="post-image">
+                <img src="/Image/pyramid.jpeg" />
+              </div>
+
+              <div class="post-bottom">
+                <div class="action">
+                  <i class="fa-solid fa-eye"></i> Views
+                </div>
+                <div class="action">
+                  <button class="like-btn">
+                    <i class="fa-solid fa-heart fa-beat"></i> Like
+                  </button>
+                </div>
+                <div class="action">
+                  <button class="opencomment">
+                    <i class="fa-solid fa-comment"></i> Comment
+                  </button>
                 </div>
 
-                <p class="post-text">Pyramid</p>
-
-                <div class="post-image">
-                  <img src="/Image/pyramid.jpeg" />
+                <div class="reaction">
+                  <button>😯</button><button>😡</button><button>❤️</button><button>😂</button><button>😢</button>
                 </div>
+              </div>
+            </div>
 
-                <div class="post-bottom">
-                  <div class="action">
-                    <i class="fa-solid fa-eye"></i> Views
-                  </div>
-                  <div class="action">
-                    <button class="like-btn">
-                      <i class="fa-solid fa-heart fa-beat"></i> Like
-                    </button>
-                  </div>
-                  <div class="action">
-                    <button class="opencomment">
-                      <i class="fa-solid fa-comment"></i> Comment
-                    </button>
-                  </div>
-
-                  <div class="reaction">
-                    <button>😯</button><button>😡</button><button>❤️</button
-                    ><button>😂</button><button>😢</button>
-                  </div>
+            <!--TODO Post 3 -->
+            <div class="post">
+              <div class="top-post">
+                <div class="post-user-info">
+                  <h4 class="post-username">
+                    <img src="/Image/avatar.jpeg" class="post-avatar" /> Lisa
+                  </h4>
+                  <p class="post-time">30 minutes ago</p>
                 </div>
               </div>
 
-              <!--TODO Post 3 -->
-              <div class="post">
-                <div class="top-post">
-                  <div class="post-user-info">
-                    <h4 class="post-username">
-                      <img src="/Image/avatar.jpeg" class="post-avatar" /> Lisa
-                    </h4>
-                    <p class="post-time">30 minutes ago</p>
-                  </div>
+              <p class="post-text">Solar system !, See more at</p>
+              <a class="link"
+                href="https://en.wikipedia.org/wiki/Solar_System">https://en.wikipedia.org/wiki/Solar_System</a>
+
+              <div class="post-image">
+                <img src="/Image/Solar.jpeg" />
+              </div>
+
+              <div class="post-bottom">
+                <div class="action">
+                  <i class="fa-solid fa-eye"></i> Views
+                </div>
+                <div class="action">
+                  <button class="like-btn">
+                    <i class="fa-solid fa-heart fa-beat"></i> Like
+                  </button>
+                </div>
+                <div class="action">
+                  <button class="opencomment">
+                    <i class="fa-solid fa-comment"></i> Comment
+                  </button>
                 </div>
 
-                <p class="post-text">Solar system !, See more at</p>
-                <a
-                  class="link"
-                  href="https://en.wikipedia.org/wiki/Solar_System"
-                  >https://en.wikipedia.org/wiki/Solar_System</a
-                >
-
-                <div class="post-image">
-                  <img src="/Image/Solar.jpeg" />
+                <div class="reaction">
+                  <button>😯</button><button>😡</button><button>❤️</button><button>😂</button><button>😢</button>
                 </div>
+              </div>
+            </div>
 
-                <div class="post-bottom">
-                  <div class="action">
-                    <i class="fa-solid fa-eye"></i> Views
-                  </div>
-                  <div class="action">
-                    <button class="like-btn">
-                      <i class="fa-solid fa-heart fa-beat"></i> Like
-                    </button>
-                  </div>
-                  <div class="action">
-                    <button class="opencomment">
-                      <i class="fa-solid fa-comment"></i> Comment
-                    </button>
-                  </div>
-
-                  <div class="reaction">
-                    <button>😯</button><button>😡</button><button>❤️</button
-                    ><button>😂</button><button>😢</button>
-                  </div>
+            <!--TODO Post 4 -->
+            <div class="post">
+              <div class="top-post">
+                <div class="post-user-info">
+                  <h4 class="post-username">
+                    <img src="/Image/avatar.jpeg" class="post-avatar" /> Lisa
+                  </h4>
+                  <p class="post-time">10 minutes ago</p>
                 </div>
               </div>
 
-              <!--TODO Post 4 -->
-              <div class="post">
-                <div class="top-post">
-                  <div class="post-user-info">
-                    <h4 class="post-username">
-                      <img src="/Image/avatar.jpeg" class="post-avatar" /> Lisa
-                    </h4>
-                    <p class="post-time">10 minutes ago</p>
-                  </div>
-                </div>
+              <p class="post-text">Who wants to try coffee in the morning?</p>
 
-                <p class="post-text">Who wants to try coffee in the morning?</p>
-
-                <div class="post-image">
-                  <img src="/Image/coffee.jpeg" />
-                </div>
-
-                <div class="post-bottom">
-                  <div class="action">
-                    <i class="fa-solid fa-eye"></i> Views
-                  </div>
-                  <div class="action">
-                    <button class="like-btn">
-                      <i class="fa-solid fa-heart fa-beat"></i> Like
-                    </button>
-                  </div>
-                  <div class="action">
-                    <button class="opencomment">
-                      <i class="fa-solid fa-comment"></i> Comment
-                    </button>
-                  </div>
-
-                  <div class="reaction">
-                    <button>😯</button><button>😡</button><button>❤️</button
-                    ><button>😂</button><button>😢</button>
-                  </div>
-                </div>
+              <div class="post-image">
+                <img src="/Image/coffee.jpeg" />
               </div>
 
-              <div class="comment-gui" id="commentPanel">
-                <div class="comment-panel">
-                  <div class="comment-panel-title">
-                    <h3><i class="fa-solid fa-comment"></i> Comment</h3>
-                  </div>
-                  <div class="comment-list">
-                    <div class="comment-item">
-                      <img src="/Image/avatar.jpeg" class="avatar" />
-                      <div class="comment-content">
-                        <h5>Peter</h5>
-                        <p>That's good.</p>
-                      </div>
-                    </div>
+              <div class="post-bottom">
+                <div class="action">
+                  <i class="fa-solid fa-eye"></i> Views
+                </div>
+                <div class="action">
+                  <button class="like-btn">
+                    <i class="fa-solid fa-heart fa-beat"></i> Like
+                  </button>
+                </div>
+                <div class="action">
+                  <button class="opencomment">
+                    <i class="fa-solid fa-comment"></i> Comment
+                  </button>
+                </div>
 
-                    <div class="comment-item">
-                      <img src="/Image/avatar.jpeg" class="avatar" />
-                      <div class="comment-content">
-                        <h5>Jay</h5>
-                        <p>WHAT DID I JUST WATCH 😳</p>
-                      </div>
-                    </div>
-
-                    <div class="comment-item">
-                      <img src="/Image/avatar.jpeg" class="avatar" />
-                      <div class="comment-content">
-                        <h5>Rosy</h5>
-                        <p>You did amazing, keep going!! 🌟</p>
-                      </div>
-                    </div>
-
-                    <div class="comment-item">
-                      <img src="/Image/avatar.jpeg" class="avatar" />
-                      <div class="comment-content">
-                        <h5>Elsa</h5>
-                        <p>I love how pure this feels 🫶</p>
-                      </div>
-                    </div>
-
-                    <div class="comment-item">
-                      <img src="/Image/avatar.jpeg" class="avatar" />
-                      <div class="comment-content">
-                        <h5>Griffin</h5>
-                        <p>Why this hit my heart tho 😢"</p>
-                      </div>
-                    </div>
-                  </div>
+                <div class="reaction">
+                  <button>😯</button><button>😡</button><button>❤️</button><button>😂</button><button>😢</button>
                 </div>
               </div>
+            </div>
 
-              <div class="create-post-gui">
-                <div class="create-post-panel">
-                  <div class="create-post-title">
-                    <h3>
-                      <i class="fa-solid fa-pen-to-square"></i> Create Post
-                    </h3>
-                  </div>
-                  <div class="create-post-user">
-                    <img src="/Image/avatar.jpeg" class="post-avatar" />
-                    <h4 class="post-username">Alex</h4>
-                  </div>
-                  <div class="create-post-write">
-                    <div id="postContent" contenteditable=""></div>
-                  </div>
-                  <div class="create-post-add">
-                    <p>Add to your post</p>
-                    <div class="create-post-media">
-                      <button class="add-image">
-                        <i class="fa-solid fa-image"></i>
-                      </button>
-                      <input
-                        type="file"
-                        id="imageInput"
-                        accept="image/*"
-                        style="display: none"
-                      />
-
-                      <button class="add-video">
-                        <i class="fa-solid fa-video"></i>
-                      </button>
-                      <input
-                        type="file"
-                        id="videoInput"
-                        accept="video/*"
-                        style="display: none"
-                      />
-                    </div>
-                  </div>
-                  <div class="create-post-btn">
-                    <button class="post-btn">
-                      <h5>Post</h5>
-                    </button>
-                  </div>
+            <div class="comment-gui" id="commentPanel">
+              <div class="comment-panel">
+                <div class="comment-panel-title">
+                  <h3><i class="fa-solid fa-comment"></i> Comment</h3>
                 </div>
-              </div>
-
-              <div class="notify-gui">
-                <div class="notify-panel">
-                  <div class="notify-title">
-                    <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+                <div class="comment-list">
+                  <div class="comment-item">
+                    <img src="/Image/avatar.jpeg" class="avatar" />
+                    <div class="comment-content">
+                      <h5>Peter</h5>
+                      <p>That's good.</p>
+                    </div>
                   </div>
-                  <div class="notify-list">
-                    <div class="notify-item">
-                      <p>You and Michael are now friends.</p>
-                    </div>
 
-                    <div class="notify-item">
-                      <p>New device detected. Was this you?</p>
+                  <div class="comment-item">
+                    <img src="/Image/avatar.jpeg" class="avatar" />
+                    <div class="comment-content">
+                      <h5>Jay</h5>
+                      <p>WHAT DID I JUST WATCH 😳</p>
                     </div>
+                  </div>
 
-                    <div class="notify-item">
-                      <p>
-                        Alert: New login detected. If this wasn't you, please
-                        secure your account.
-                      </p>
+                  <div class="comment-item">
+                    <img src="/Image/avatar.jpeg" class="avatar" />
+                    <div class="comment-content">
+                      <h5>Rosy</h5>
+                      <p>You did amazing, keep going!! 🌟</p>
                     </div>
+                  </div>
 
-                    <div class="notify-item">
-                      <p>Your account was accessed using Windows at 16:05.</p>
+                  <div class="comment-item">
+                    <img src="/Image/avatar.jpeg" class="avatar" />
+                    <div class="comment-content">
+                      <h5>Elsa</h5>
+                      <p>I love how pure this feels 🫶</p>
+                    </div>
+                  </div>
+
+                  <div class="comment-item">
+                    <img src="/Image/avatar.jpeg" class="avatar" />
+                    <div class="comment-content">
+                      <h5>Griffin</h5>
+                      <p>Why this hit my heart tho 😢"</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!--TODO Right Side -->
-          <div class="col-3">
-            <div class="container-fluid">
-              <div class="Stories">
-                <h2 class="story-title">Stories</h2>
+            <div class="create-post-gui">
+              <div class="create-post-panel">
+                <div class="create-post-title">
+                  <h3>
+                    <i class="fa-solid fa-pen-to-square"></i> Create Post
+                  </h3>
+                </div>
+                <div class="create-post-user">
+                  <img src="/Image/avatar.jpeg" class="post-avatar" />
+                  <h4 class="post-username">Alex</h4>
+                </div>
+                <div class="create-post-write">
+                  <div id="postContent" contenteditable=""></div>
+                </div>
+                <div class="create-post-add">
+                  <p>Add to your post</p>
+                  <div class="create-post-media">
+                    <button class="add-image">
+                      <i class="fa-solid fa-image"></i>
+                    </button>
+                    <input type="file" id="imageInput" accept="image/*" style="display: none" />
 
-                <div class="story-post">
-                  <div class="top-story">
-                    <img src="/Image/morning.jpeg" alt="" />
-                    <div class="bottom-story">
-                      <img src="/Image/avatar.jpeg" alt="" /> Alex
-                    </div>
+                    <button class="add-video">
+                      <i class="fa-solid fa-video"></i>
+                    </button>
+                    <input type="file" id="videoInput" accept="video/*" style="display: none" />
                   </div>
-
-                  <div class="top-story">
-                    <img src="/Image/pyramid.jpeg" alt="" />
-                    <div class="bottom-story">
-                      <img src="/Image/avatar.jpeg" alt="" /> Tom
-                    </div>
-                  </div>
+                </div>
+                <div class="create-post-btn">
+                  <button class="post-btn">
+                    <h5>Post</h5>
+                  </button>
                 </div>
               </div>
+            </div>
 
-              <div class="suggestions">
-                <h2 class="suggestions-title">Suggestions</h2>
-                <div class="suggest-user">
-                  <div class="suggest-name">
-                    <img src="/Image/avatar.jpeg" alt="" /> Nick
-                  </div>
-                  <div class="follow-btn">
-                    <button>
-                      <i class="fa-solid fa-user-plus"></i>
-                      Follow
-                    </button>
-                  </div>
+            <div class="notify-gui">
+              <div class="notify-panel">
+                <div class="notify-title">
+                  <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
                 </div>
-
-                <div class="suggest-user">
-                  <div class="suggest-name">
-                    <img src="/Image/avatar.jpeg" alt="" /> Peter
+                <div class="notify-list">
+                  <div class="notify-item">
+                    <p>You and Michael are now friends.</p>
                   </div>
 
-                  <div class="follow-btn">
-                    <button>
-                      <i class="fa-solid fa-user-plus"></i>
-                      Follow
-                    </button>
+                  <div class="notify-item">
+                    <p>New device detected. Was this you?</p>
                   </div>
-                </div>
 
-                <div class="suggest-user">
-                  <div class="suggest-name">
-                    <img src="/Image/avatar.jpeg" alt="" /> Michael
+                  <div class="notify-item">
+                    <p>
+                      Alert: New login detected. If this wasn't you, please
+                      secure your account.
+                    </p>
                   </div>
-                  <div class="follow-btn">
-                    <button>
-                      <i class="fa-solid fa-user-plus"></i>
-                      Follow
-                    </button>
-                  </div>
-                </div>
 
-                <div class="suggest-user">
-                  <div class="suggest-name">
-                    <img src="/Image/avatar.jpeg" alt="" /> Klee
-                  </div>
-                  <div class="follow-btn">
-                    <button>
-                      <i class="fa-solid fa-user-plus"></i>
-                      Follow
-                    </button>
+                  <div class="notify-item">
+                    <p>Your account was accessed using Windows at 16:05.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!--TODO Right Side -->
+        <div class="col-3">
+          <div class="container-fluid">
+            <div class="Stories">
+              <h2 class="story-title">Stories</h2>
+
+              <div class="story-post">
+                <div class="top-story">
+                  <img src="/Image/morning.jpeg" alt="" />
+                  <div class="bottom-story">
+                    <img src="/Image/avatar.jpeg" alt="" /> Alex
+                  </div>
+                </div>
+
+                <div class="top-story">
+                  <img src="/Image/pyramid.jpeg" alt="" />
+                  <div class="bottom-story">
+                    <img src="/Image/avatar.jpeg" alt="" /> Tom
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="suggestions">
+              <h2 class="suggestions-title">Suggestions</h2>
+              <div class="suggest-user">
+                <div class="suggest-name">
+                  <img src="/Image/avatar.jpeg" alt="" /> Nick
+                </div>
+                <div class="follow-btn">
+                  <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Follow
+                  </button>
+                </div>
+              </div>
+
+              <div class="suggest-user">
+                <div class="suggest-name">
+                  <img src="/Image/avatar.jpeg" alt="" /> Peter
+                </div>
+
+                <div class="follow-btn">
+                  <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Follow
+                  </button>
+                </div>
+              </div>
+
+              <div class="suggest-user">
+                <div class="suggest-name">
+                  <img src="/Image/avatar.jpeg" alt="" /> Michael
+                </div>
+                <div class="follow-btn">
+                  <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Follow
+                  </button>
+                </div>
+              </div>
+
+              <div class="suggest-user">
+                <div class="suggest-name">
+                  <img src="/Image/avatar.jpeg" alt="" /> Klee
+                </div>
+                <div class="follow-btn">
+                  <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Follow
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-    <script src="/Javascript/Home.js"></script>
-  </body>
+    </div>
+  </section>
+  <script type="module" src="/Javascript/Home.js"></script>
+</body>
+
 </html>

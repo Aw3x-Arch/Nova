@@ -1,242 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Messages page - Nova</title>
 
-    <!--TODO Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages page - Nova</title>
 
-    <!--TODO Style.css  -->
+  <!--TODO Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/Css/Messages.css" />
+  <!--TODO Style.css  -->
 
-    <!--TODO Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body class="light">
-    <button id="toggleTheme">
-      <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
-    </button>
-    <section class="container-fluid">
-      <div class="pc-gui">
-        <div class="row">
-          <!--TODO Navbar -->
-          <div class="col-3">
-            <div class="navbar">
-              <ul class="navbar-nav">
-                <li class="nav-item no-scale" id="Logo">
-                  <h1>
-                    <img
-                      id="logoImg"
-                      src="/Image/LogoDark.svg"
-                      alt=""
-                      width="60"
-                    />
-                    Nova
-                  </h1>
-                </li>
+  <link rel="stylesheet" href="/Css/Messages.css" />
 
-                <li class="nav-item">
-                  <a href="Home.html"
-                    ><i class="fa-solid fa-compass"></i> New feeds</a
-                  >
-                </li>
+  <!--TODO Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
 
-                <li class="nav-item">
-                  <a href="/Html/Group.html"
-                    ><i class="fa-solid fa-people-group"></i> Group</a
-                  >
-                </li>
+<body class="light">
+  <button id="toggleTheme">
+    <img id="themeIcon" src="/Image/darkIcon.svg" alt="" width="25" /> Dark
+  </button>
+  <section class="container-fluid">
+    <div class="pc-gui">
+      <div class="row">
+        <!--TODO Navbar -->
+        <div class="col-3">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item no-scale" id="Logo">
+                <h1>
+                  <img id="logoImg" src="/Image/LogoDark.svg" alt="" width="60" />
+                  Nova
+                </h1>
+              </li>
 
-                <li class="nav-item" id="selected">
-                  <a href="/Html/Messages.html"
-                    ><i class="fa-solid fa-message"></i> Messages</a
-                  >
-                </li>
+              <li class="nav-item">
+                <a href="Home.html"><i class="fa-solid fa-compass"></i> New feeds</a>
+              </li>
 
-                <li class="nav-item">
-                  <a href="Friends.html"
-                    ><i class="fa-solid fa-user-group"></i> Friends</a
-                  >
-                </li>
+              <li class="nav-item">
+                <a href="/Html/Group.html"><i class="fa-solid fa-people-group"></i> Group</a>
+              </li>
 
-                <li class="nav-item" id="notify">
-                  <button class="openNotify">
-                    <i class="fa-solid fa-bell"></i> Notifications
-                  </button>
-                </li>
+              <li class="nav-item" id="selected">
+                <a href="/Html/Messages.html"><i class="fa-solid fa-message"></i> Messages</a>
+              </li>
 
-                <div class="profile">
-                  <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+              <li class="nav-item">
+                <a href="Friends.html"><i class="fa-solid fa-user-group"></i> Friends</a>
+              </li>
 
-                  <div class="info-user">
-                    <img src="/Image/avatar.jpeg" alt="" />
-                    <h4>Michael Robert</h4>
-                  </div>
+              <li class="nav-item" id="notify">
+                <button class="openNotify">
+                  <i class="fa-solid fa-bell"></i> Notifications
+                </button>
+              </li>
 
-                  <div class="status">
-                    <p class="your-post-count">
-                      <i class="fa-solid fa-paper-plane"></i> Your post: 0 post
-                    </p>
-                    <p>
-                      <i class="fa-solid fa-chart-line"></i> Active time: 1 hour
-                    </p>
-                  </div>
+              <div class="profile">
+                <h1><i class="fa-solid fa-address-card"></i> Profile</h1>
+
+                <div class="info-user">
+                  <img src="/Image/avatar.jpeg" alt="" />
+                  <h4></h4>
                 </div>
-              </ul>
-            </div>
+                <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+
+              </div>
+            </ul>
           </div>
+        </div>
 
-          <!--TODO Friend  -->
+        <!--TODO Friend  -->
 
-          <div class="col-2">
-            <div class="friend-list">
-              <div class="Search-bar">
-                <input type="text" placeholder="🔍 Search" />
+        <div class="col-2">
+          <div class="friend-list">
+            <div class="Search-bar">
+              <input type="text" placeholder="🔍 Search" />
+            </div>
+
+            <div class="messages-title">
+              <h2>Messages</h2>
+            </div>
+
+            <div class="friend-count">
+              <h5>
+                <i class="fa-solid fa-user-group"></i> Your friends:
+                <span id="friendCount">0</span>
+              </h5>
+            </div>
+
+            <div class="friend-info">
+              <div class="friend-name" data-name="Nick" data-img="/Image/avatar.jpeg">
+                <img src="/Image/avatar.jpeg" alt="" /> Nick
               </div>
 
-              <div class="messages-title">
-                <h2>Messages</h2>
+              <div class="friend-name" data-name="Williams" data-img="/Image/avatar.jpeg">
+                <img src="/Image/avatar.jpeg" alt="" /> Williams
               </div>
 
-              <div class="friend-count">
-                <h5>
-                  <i class="fa-solid fa-user-group"></i> Your friends:
-                  <span id="friendCount">0</span>
-                </h5>
+              <div class="friend-name" data-name="Robert" data-img="/Image/avatar.jpeg">
+                <img src="/Image/avatar.jpeg" alt="" /> Robert
               </div>
 
-              <div class="friend-info">
-                <div
-                  class="friend-name"
-                  data-name="Nick"
-                  data-img="/Image/avatar.jpeg"
-                >
-                  <img src="/Image/avatar.jpeg" alt="" /> Nick
-                </div>
+              <div class="friend-name" data-name="David" data-img="/Image/avatar.jpeg">
+                <img src="/Image/avatar.jpeg" alt="" /> David
+              </div>
 
-                <div
-                  class="friend-name"
-                  data-name="Williams"
-                  data-img="/Image/avatar.jpeg"
-                >
-                  <img src="/Image/avatar.jpeg" alt="" /> Williams
-                </div>
-
-                <div
-                  class="friend-name"
-                  data-name="Robert"
-                  data-img="/Image/avatar.jpeg"
-                >
-                  <img src="/Image/avatar.jpeg" alt="" /> Robert
-                </div>
-
-                <div
-                  class="friend-name"
-                  data-name="David"
-                  data-img="/Image/avatar.jpeg"
-                >
-                  <img src="/Image/avatar.jpeg" alt="" /> David
-                </div>
-
-                <div
-                  class="friend-name"
-                  data-name="John"
-                  data-img="/Image/avatar.jpeg"
-                >
-                  <img src="/Image/avatar.jpeg" alt="" /> John
-                </div>
+              <div class="friend-name" data-name="John" data-img="/Image/avatar.jpeg">
+                <img src="/Image/avatar.jpeg" alt="" /> John
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-7">
-            <div class="messages-panel">
-              <div class="top-panel">
-                <div class="opposite-name">
-                  <p><img src="/Image/avatar.jpeg" alt="" /> Nick</p>
+        <div class="col-7">
+          <div class="messages-panel">
+            <div class="top-panel">
+              <div class="opposite-name">
+                <p><img src="/Image/avatar.jpeg" alt="" /> Nick</p>
+              </div>
+            </div>
+
+            <div class="middle-panel">
+              <div class="opposite-info">
+                <h3>
+                  <img src="/Image/avatar.jpeg" alt="" />
+                  <span class="name">Nick</span>
+                </h3>
+              </div>
+
+              <div class="chat">
+                <div class="message opposite">
+                  <p>Hello!</p>
+                </div>
+
+                <div class="message user">
+                  <p>Hi!</p>
+                </div>
+
+                <div class="message opposite">
+                  <p>How are u today?</p>
+                </div>
+
+                <div class="message user">
+                  <p>I'm quite alright</p>
+                </div>
+
+                <div class="message user">
+                  <p>How about you</p>
+                </div>
+
+                <div class="message opposite">
+                  <p>I feel a bit sad</p>
                 </div>
               </div>
 
-              <div class="middle-panel">
-                <div class="opposite-info">
-                  <h3>
-                    <img src="/Image/avatar.jpeg" alt="" />
-                    <span class="name">Nick</span>
-                  </h3>
-                </div>
+              <div class="send">
+                <textarea placeholder="Write a message..." id="messageInput"></textarea>
+                <button id="sendBtn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Send
+                </button>
+              </div>
 
-                <div class="chat">
-                  <div class="message opposite">
-                    <p>Hello!</p>
+              <div class="notify-gui">
+                <div class="notify-panel">
+                  <div class="notify-title">
+                    <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
                   </div>
-
-                  <div class="message user">
-                    <p>Hi!</p>
-                  </div>
-
-                  <div class="message opposite">
-                    <p>How are u today?</p>
-                  </div>
-
-                  <div class="message user">
-                    <p>I'm quite alright</p>
-                  </div>
-
-                  <div class="message user">
-                    <p>How about you</p>
-                  </div>
-
-                  <div class="message opposite">
-                    <p>I feel a bit sad</p>
-                  </div>
-                </div>
-
-                <div class="send">
-                  <textarea
-                    placeholder="Write a message..."
-                    id="messageInput"
-                  ></textarea>
-                  <button id="sendBtn">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    Send
-                  </button>
-                </div>
-
-                <div class="notify-gui">
-                  <div class="notify-panel">
-                    <div class="notify-title">
-                      <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+                  <div class="notify-list">
+                    <div class="notify-item">
+                      <p>You and Michael are now friends.</p>
                     </div>
-                    <div class="notify-list">
-                      <div class="notify-item">
-                        <p>You and Michael are now friends.</p>
-                      </div>
 
-                      <div class="notify-item">
-                        <p>New device detected. Was this you?</p>
-                      </div>
+                    <div class="notify-item">
+                      <p>New device detected. Was this you?</p>
+                    </div>
 
-                      <div class="notify-item">
-                        <p>
-                          Alert: New login detected. If this wasn't you, please
-                          secure your account.
-                        </p>
-                      </div>
+                    <div class="notify-item">
+                      <p>
+                        Alert: New login detected. If this wasn't you, please
+                        secure your account.
+                      </p>
+                    </div>
 
-                      <div class="notify-item">
-                        <p>Your account was accessed using Windows at 16:05.</p>
-                      </div>
+                    <div class="notify-item">
+                      <p>Your account was accessed using Windows at 16:05.</p>
                     </div>
                   </div>
                 </div>
@@ -245,7 +196,9 @@
           </div>
         </div>
       </div>
-    </section>
-    <script src="/Javascript/Messages.js"></script>
-  </body>
+    </div>
+  </section>
+  <script type="module" src="/Javascript/Messages.js"></script>
+</body>
+
 </html>
